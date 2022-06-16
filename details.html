@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>MarketPlace - Details</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>
+                    <a href="./index.html">MarketPlace</a>
+                </h1>
+            </div>
+            <div class="authentication">
+                <span class="auth-option registration">Inscription</span>
+                <span class="auth-option login">Connexion</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="details">
+            <img src="./images/apple.png" alt="">
+            <div class="product-details">
+                <h2 class="product-details_name">Pomme</h2>
+                <span class="product-details_supplier">De Gojo-fruits</span>
+                <p class="product-details_desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <span class="product-details_price">700 FCFA</span>
+                <div class="add_to_cart">
+                    <div class="quantity">
+                        <span>Quantité :</span>
+                        <select name="quantity" id="" class="quantity_drop_menu">
+                            <option value="1" class="quantity_value">1 kilos</option>
+                            <option value="2" class="quantity_value">2 kilos</option>
+                            <option value="5" class="quantity_value">5 kilos</option>
+                            <option value="10" class="quantity_value">10 kilos</option>
+                        </select>
+                    </div>
+
+                    <a href="./cart.html" class="btn_add_to_cart">Ajouter au panier</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <section class="newsletter">
+            <h2 class="title">Newsletter</h2>
+            <p class="desc">Recevez des notifications sur vos produits favoris</p>
+            <div class="form-container">
+                <input type="text" placeholder="Ton email">
+                <button>
+                    <img src="./images/mail.png" alt="">
+                </button>
+            </div>
+        </section>
+    </footer>
+    <script>
+        const products = [
+            {
+                
+                "name" : "Carotte",
+                "categorie": "legumes",
+                "price" : 500,
+                "supplier": "Ninja-Vegetables",
+                "imgUrl" : "./images/carrot.png"
+            },
+            {
+                
+                "name" : "Chou",
+                "categorie": "legumes",
+                "price" : 400,
+                "supplier": "Ninja-Vegetables",
+                "imgUrl" : "./images/cabbage.png"
+            },
+            {
+                
+                "name" : "Oignon",
+                "categorie": "legumes",
+                "price" : 500,
+                "supplier": "Ninja-Vegetables",
+                "imgUrl" : "./images/oignon.png"
+            },
+            {
+                
+                "name" : "Aubergine",
+                "categorie": "legumes",
+                "price" : 250,
+                "supplier": "Ninja-Vegetables",
+                "imgUrl" : "./images/eggplant.png"
+            },
+            {
+                
+                "name" : "Orange",
+                "categorie": "fruits",
+                "price" : 600,
+                "supplier": "Gojo-fruits",
+                "imgUrl" : "./images/orange.png"
+            },
+            {
+                
+                "name" : "Pomme",
+                "categorie": "fruits",
+                "price" : 700,
+                "supplier": "Gojo-fruits",
+                "imgUrl" : "./images/apple.png"
+            },
+            {
+                
+                "name" : "Banane",
+                "categorie": "fruits",
+                "price" : 500,
+                "supplier": "Gojo-fruits",
+                "imgUrl" : "./images/banana.png"
+            },
+            {
+                
+                "name" : "Ananas",
+                "categorie": "fruits",
+                "price" : 900,
+                "supplier": "Gojo-fruits",
+                "imgUrl" : "./images/pineapple.png"
+            }
+        ]
+
+        const select = document.querySelector('select')
+        let kilos = 1
+
+        
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const item = urlParams.get('item')
+
+        currentProduct = products.find(product => product.name == item)
+        document.querySelector('.product-details_name').innerText = currentProduct.name
+        document.querySelector('.product-details_supplier').innerText = `De ${currentProduct.supplier}`
+        document.querySelector('.product-details_price').innerText = `${currentProduct.price} FCFA`
+        document.querySelector('img').src = currentProduct.imgUrl
+        select.addEventListener('change', (e) => {
+            kilos = e.target.value
+            document.querySelector('#details a').setAttribute("href", `./cart.html?item=${currentProduct.name}&kilos=${kilos}`)
+        })
+
+        document.querySelector('#details a').setAttribute("href", `./cart.html?item=${currentProduct.name}&kilos=${kilos}`)
+        
+        
+
+    </script>
+</body>
+
+</html>

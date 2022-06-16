@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>MarketPlace</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>
+                    <a href="./index.html">MarketPlace</a>
+                </h1>
+            </div>
+            <div class="authentication">
+                <span class="auth-option registration">Inscription</span>
+                <span class="auth-option login">Connexion</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 style="font-weight: 300; text-align:center">Votre Panier</h1>
+
+        <section class="cart">
+            <nav class="cart-nav">
+                <button class="cart_btn cart_btn_L"><a href="./index.html">Retour au marché</a></button>
+                <button class="cart_btn cart_btn_R">Acheter maintenant</button>
+            </nav>
+            <div class="container">
+                <div class="cart-details">
+                    <div class="cart-product">
+                        <img src="" alt="" class="cart-product_img">
+                        <div class="cart-product_info">
+                            <span class="cartInfo-productId"><b>ID:</b> 617ac32740a0974136e3c241</span>
+                            <span class="cartInfo-productName"><b>Produit:</b> </span>
+                            <span class="cartInfo-productQuantity"><b>Quantity:</b> 10 kilos</span>
+                            <span class="cartInfo-productOwner"><b>Fournisseur:</b></span>
+                        </div>
+                    </div>
+                    <div class="cart-amount">
+                        <h3>7000</h3><span class="currency">CFA</span>
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <h1> Resumé Commande</h1>
+                    <div class="cart-summary-detail">
+                        <span class="cart-summary-detail_text">Livraison : </span>
+                        <span class="cart-summary-detail_price">2000 FCFA</span>
+                    </div>
+                    <div class="cart-summary-detail">
+                        <span class="cart-summary-detail_text">Montant Total : </span>
+                        <span class="cart-summary-detail_price total">9000 FCFA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="newsletter">
+            <h2 class="title">Newsletter</h2>
+            <p class="desc">Recevez des notifications sur vos produits favoris</p>
+            <div class="form-container">
+                <input type="text" placeholder="Ton email">
+                <button>
+                    <img src="./images/mail.png" alt="">
+                </button>
+            </div>
+        </section>
+    </footer>
+    <script>
+        const products = [
+            {
+                
+                "name" : "Carotte",
+                "categorie": "legumes",
+                "price" : 500,
+                "supplier": "Ninja-Vegetables",
+                "imgUrl" : "./images/carrot.png"
+            },
+            {
+                
+                "name" : "Chou",
+                "categorie": "legumes",
+                "price" : 400,
+                "supplier": "Ninja-Vegetables",
+                "imgUrl" : "./images/cabbage.png"
+            },
+            {
+                
+                "name" : "Oignon",
+                "categorie": "legumes",
+                "price" : 500,
+                "supplier": "Ninja-Vegetables",
+                "imgUrl" : "./images/oignon.png"
+            },
+            {
+                
+                "name" : "Aubergine",
+                "categorie": "legumes",
+                "price" : 250,
+                "supplier": "Ninja-Vegetables",
+                "imgUrl" : "./images/eggplant.png"
+            },
+            {
+                
+                "name" : "Orange",
+                "categorie": "fruits",
+                "price" : 600,
+                "supplier": "Gojo-fruits",
+                "imgUrl" : "./images/orange.png"
+            },
+            {
+                
+                "name" : "Pomme",
+                "categorie": "fruits",
+                "price" : 700,
+                "supplier": "Gojo-fruits",
+                "imgUrl" : "./images/apple.png"
+            },
+            {
+                
+                "name" : "Banane",
+                "categorie": "fruits",
+                "price" : 500,
+                "supplier": "Gojo-fruits",
+                "imgUrl" : "./images/banana.png"
+            },
+            {
+                
+                "name" : "Ananas",
+                "categorie": "fruits",
+                "price" : 900,
+                "supplier": "Gojo-fruits",
+                "imgUrl" : "./images/pineapple.png"
+            }
+        ]
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const item = urlParams.get('item')
+        const kilos = urlParams.get('kilos')
+
+        console.log(item, kilos)
+
+        currentProduct = products.find(product => product.name == item)
+        console.log(currentProduct)
+
+        document.querySelector('.cartInfo-productName').innerHTML = "<b>Produit:</b> " + currentProduct.name
+        document.querySelector('.cartInfo-productOwner').innerHTML = "<b>Fournisseur:</b>" + currentProduct.supplier
+        document.querySelector('.cartInfo-productQuantity').innerHTML = "<b>Quantité:</b> " + kilos + " kilos"
+        document.querySelector('h3').innerText = currentProduct.price * kilos
+        document.querySelector('.cart-product_img').src = currentProduct.imgUrl
+        document.querySelector('.total').innerText = `${currentProduct.price * kilos + 2000} FCFA`
+
+    </script>
+</body>
+
+</html>

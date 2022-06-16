@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>MarketPlace - accueil</title>
+
+    <style>
+
+        .auth_form {
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        .input_field {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+
+        .form_register {
+            flex: 1;
+            /* display: flex; */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form_login {
+            flex: 1;
+        }
+
+        .annonce {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            width: 500px;
+            height: auto;
+            padding: 20px;
+            border: 0.5px solid #d8d8d8;
+            box-shadow: 1px 0px 13px 2px #d8d8d8;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="./images/logo.jpg" style="width: 100px;"></a>
+            </div>
+            <div class="authentication">
+                <span class="auth-option registration">Inscription</span>
+                <span class="auth-option login">Connexion</span>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="hero">
+            <div class="hero-left">
+                <img src="./images/hero-left.jpg" alt="hero image" class="hero-img">
+            </div>
+            <div class="hero-right">
+                <img src="./images/hero-right.jpg" alt="hero image" class="hero-img">
+            </div>
+            <p class="hero-text">Produits frais et de qualité, <br>Made in Sénégal par nos meilleurs agriculteurs</p>
+        </section>
+        <section class="cat">
+            <div class="cat-fruits">
+                <img src="./images/fruits-image.jpg" alt="image de fruit" class="cat-img">
+                <a href="#" class="cat-txt">Fruits</a>
+            </div>
+            <div class="cat-vegetables">
+                <img src="./images/vegetables-image.jpg" alt="image de Légume" class="cat-img">
+                <a href="#" class="cat-txt">Légumes</a>
+            </div>
+        </section>
+
+        <section class="auth_form">
+            <div class="form_register">
+                <h4 style="font-size: 1.5rem; text-align: left; margin-bottom: 40px;">Inscription</h4>
+                <div class="input_field">
+                    <label for="" style="display: block; font-size: 1.2rem; margin-bottom: 10px;">Nom</label>
+                    <input type="text" name="" id="" style="padding: 10px 20px; width: 60%; border: none; border-bottom: 2px solid black; outline: none">
+                </div>
+                <div class="input_field">
+                    <label for="" style="display: block; font-size: 1.2rem; margin-bottom: 10px;">Prenom</label>
+                    <input type="text" name="" id="" style="padding: 10px 20px; width: 60%; border: none; border-bottom: 2px solid black; outline: none">
+                </div>
+                <div class="input_field">
+                    <label for="" style="display: block; font-size: 1.2rem; margin-bottom: 10px;">Email</label>
+                    <input type="text" name="" id="" style="padding: 10px 20px; width: 60%; border: none; border-bottom: 2px solid black; outline: none">
+                </div>
+                <div class="input_field">
+                    <label for="" style="display: block; font-size: 1.2rem; margin-bottom: 10px;">Mot de passe</label>
+                    <input type="text" name="" id="" style="padding: 10px 20px; width: 60%; border: none; border-bottom: 2px solid black; outline: none">
+                </div>
+                <div class="input_field">
+                    <label for="" style="display: block; font-size: 1.2rem; margin-bottom: 10px;">Role</label>
+                    <select name="" id="" style="width: 60%; padding: 10px 20px;">
+                        <option value="">Fournisseur</option>
+                        <option value="">Client</option>
+                    </select>
+                </div>
+                <button style="width: fit-content;padding: 15px 30px; color: #fff; font-size: 1.2rem;">S'incrire</button>
+            </div>
+
+            <div class="form_login">
+                <h4 style="font-size: 1.5rem; text-align: left; margin-bottom: 40px;">Connexion</h4>
+                <div class="input_field">
+                    <label for="" style="display: block; font-size: 1.2rem; margin-bottom: 10px;">Email</label>
+                    <input type="text" name="" id="" style="padding: 10px 20px; width: 60%; border: none; border-bottom: 2px solid black; outline: none;">
+                </div>
+                <div class="input_field">
+                    <label for="" style="display: block; font-size: 1.2rem; margin-bottom: 10px;">Mot de passe</label>
+                    <input type="text" name="" id="" style="padding: 10px 20px; width: 60%; border: none; border-bottom: 2px solid black; outline: none;">
+                </div>
+                <button style="width: fit-content;padding: 15px 30px; color: #fff; font-size: 1.2rem;">Se Connecter</button>
+            </div>
+        </section>
+
+        <section class="annonce">
+            <div class="card">
+                <div class="profile">
+                    <span style="font-weight: bold;">Mamour</span>
+                    <span style="font-weight: bold;">DIOP</span>
+                    <span style="display: block">Vendeur</span>
+                </div>
+                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut architecto voluptatibus vitae totam accusantium, cupiditate possimus obcaecati, aliquam, ad autem cumque repellendus odit quam iusto sequi maxime? A, architecto nobis.</p>
+                <img src="./images/cabbage.png" style="max-width: 100%; height: auto;">
+                <button style="padding: 10px 15px; width: 100%; color: #fff; font-size: 1.2rem; font-weight: bold;">Contacter</button>
+            </div>
+            
+        </section>
+
+        <section class="product">
+            <div class="product-card">
+                <img src="" alt="" class="product-image">
+                <div class="tools">
+                    <a href=""><img src="./images/cart.png" alt=""></a>
+                    <a href=""><img src="./images/eyes.png" alt=""></a>
+                    <a href=""><img src="./images/heart.png" alt=""></a>
+                </div>
+                <div class="product-card-info">
+                    <span class="product-name"></span>
+                    <div class="product-price">
+                        <span class="int"></span>
+                        <span class="balance">FCFA/Kilos</span>
+                    </div>
+                    <span class="product-supplier"></span>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="" alt="" class="product-image">
+                <div class="tools">
+                    <a href=""><img src="./images/cart.png" alt=""></a>
+                    <a href=""><img src="./images/eyes.png" alt=""></a>
+                    <a href=""><img src="./images/heart.png" alt=""></a>
+                </div>
+                <div class="product-card-info">
+                    <span class="product-name"></span>
+                    <div class="product-price">
+                        <span class="int"></span>
+                        <span class="balance">FCFA/Kilos</span>
+                    </div>
+                    <span class="product-supplier"></span>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="" alt="" class="product-image">
+                <div class="tools">
+                    <a href=""><img src="./images/cart.png" alt=""></a>
+                    <a href=""><img src="./images/eyes.png" alt=""></a>
+                    <a href=""><img src="./images/heart.png" alt=""></a>
+                </div>
+                <div class="product-card-info">
+                    <span class="product-name"></span>
+                    <div class="product-price">
+                        <span class="int"></span>
+                        <span class="balance">FCFA/Kilos</span>
+                    </div>
+                    <span class="product-supplier"></span>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="" alt="" class="product-image">
+                <div class="tools">
+                    <a href=""><img src="./images/cart.png" alt=""></a>
+                    <a href=""><img src="./images/eyes.png" alt=""></a>
+                    <a href=""><img src="./images/heart.png" alt=""></a>
+                </div>
+                <div class="product-card-info">
+                    <span class="product-name"></span>
+                    <div class="product-price">
+                        <span class="int"></span>
+                        <span class="balance">FCFA/Kilos</span>
+                    </div>
+                    <span class="product-supplier"></span>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="" alt="" class="product-image">
+                <div class="tools">
+                    <a href=""><img src="./images/cart.png" alt=""></a>
+                    <a href=""><img src="./images/eyes.png" alt=""></a>
+                    <a href=""><img src="./images/heart.png" alt=""></a>
+                </div>
+                <div class="product-card-info">
+                    <span class="product-name"></span>
+                    <div class="product-price">
+                        <span class="int"></span>
+                        <span class="balance">FCFA/Kilos</span>
+                    </div>
+                    <span class="product-supplier"></span>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="" alt="" class="product-image">
+                <div class="tools">
+                    <a href=""><img src="./images/cart.png" alt=""></a>
+                    <a href=""><img src="./images/eyes.png" alt=""></a>
+                    <a href=""><img src="./images/heart.png" alt=""></a>
+                </div>
+                <div class="product-card-info">
+                    <span class="product-name"></span>
+                    <div class="product-price">
+                        <span class="int"></span>
+                        <span class="balance">FCFA/Kilos</span>
+                    </div>
+                    <span class="product-supplier"></span>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="" alt="" class="product-image">
+                <div class="tools">
+                    <a href=""><img src="./images/cart.png" alt=""></a>
+                    <a href=""><img src="./images/eyes.png" alt=""></a>
+                    <a href=""><img src="./images/heart.png" alt=""></a>
+                </div>
+                <div class="product-card-info">
+                    <span class="product-name"></span>
+                    <div class="product-price">
+                        <span class="int"></span>
+                        <span class="balance">FCFA/Kilos</span>
+                    </div>
+                    <span class="product-supplier"></span>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="" alt="" class="product-image">
+                <div class="tools">
+                    <a href=""><img src="./images/cart.png" alt=""></a>
+                    <a href=""><img src="./images/eyes.png" alt=""></a>
+                    <a href=""><img src="./images/heart.png" alt=""></a>
+                </div>
+                <div class="product-card-info">
+                    <span class="product-name"></span>
+                    <div class="product-price">
+                        <span class="int"></span>
+                        <span class="balance">FCFA/Kilos</span>
+                    </div>
+                    <span class="product-supplier"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="newsletter">
+            <h2 class="title">Newsletter</h2>
+            <p class="desc">Recevez des notifications sur vos produits favoris</p>
+            <div class="form-container">
+                <input type="text" placeholder="Ton email">
+                <button>
+                    <img src="./images/mail.png" alt="">
+                </button>
+            </div>
+        </section>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+
+</html>

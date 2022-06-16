@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>MarketPlace</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>
+                    <a href="./index.html">MarketPlace</a>
+                </h1>
+            </div>
+            <div class="authentication">
+                <span class="auth-option registration">Inscription</span>
+                <span class="auth-option login">Connexion</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="filter">
+            <div class="filter-L">
+                <span class="filter-txt">Filtrer par</span>
+                <select name="filter" class="filter-product">
+                    <option value="1">Plus apprecié</option>
+                    <option value="2">Meilleur vente</option>
+                </select>
+            </div>
+            <div class="filter_R">
+                <span class="filter-txt">Trier par</span>
+                <select name="filter" class="filter-product">
+                    <option value="1">Plus apprecié</option>
+                    <option value="2">Meilleur vente</option>
+                </select>
+            </div>
+        </div>
+        <section class="product-D">
+            <div class="product-card">
+                <img src="" alt="" class="product-image">
+                <div class="tools">
+                    <a href=""><img src="./images/cart.png" alt=""></a>
+                    <a href=""><img src="./images/eyes.png" alt=""></a>
+                    <a href=""><img src="./images/heart.png" alt=""></a>
+                </div>
+                <div class="product-card-info">
+                    <span class="product-name"></span>
+                    <div class="product-price">
+                        <span class="int"></span>
+                        <span class="balance">FCFA/Kilos</span>
+                    </div>
+                    <span class="product-supplier"></span>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="" alt="" class="product-image">
+                <div class="tools">
+                    <a href=""><img src="./images/cart.png" alt=""></a>
+                    <a href=""><img src="./images/eyes.png" alt=""></a>
+                    <a href=""><img src="./images/heart.png" alt=""></a>
+                </div>
+                <div class="product-card-info">
+                    <span class="product-name"></span>
+                    <div class="product-price">
+                        <span class="int"></span>
+                        <span class="balance">FCFA/Kilos</span>
+                    </div>
+                    <span class="product-supplier"></span>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="" alt="" class="product-image">
+                <div class="tools">
+                    <a href=""><img src="./images/cart.png" alt=""></a>
+                    <a href=""><img src="./images/eyes.png" alt=""></a>
+                    <a href=""><img src="./images/heart.png" alt=""></a>
+                </div>
+                <div class="product-card-info">
+                    <span class="product-name"></span>
+                    <div class="product-price">
+                        <span class="int"></span>
+                        <span class="balance">FCFA/Kilos</span>
+                    </div>
+                    <span class="product-supplier"></span>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="" alt="" class="product-image">
+                <div class="tools">
+                    <a href=""><img src="./images/cart.png" alt=""></a>
+                    <a href=""><img src="./images/eyes.png" alt=""></a>
+                    <a href=""><img src="./images/heart.png" alt=""></a>
+                </div>
+                <div class="product-card-info">
+                    <span class="product-name"></span>
+                    <div class="product-price">
+                        <span class="int"></span>
+                        <span class="balance">FCFA/Kilos</span>
+                    </div>
+                    <span class="product-supplier"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="newsletter">
+            <h2 class="title">Newsletter</h2>
+            <p class="desc">Recevez des notifications sur vos produits favoris</p>
+            <div class="form-container">
+                <input type="text" placeholder="Ton email">
+                <button>
+                    <img src="./images/mail.png" alt="">
+                </button>
+            </div>
+        </section>
+    </footer>
+    <script>
+        const card = document.querySelectorAll(".product-card")
+
+        const products = [
+            {
+                
+                "name" : "Carotte",
+                "categorie": "legumes",
+                "price" : 500,
+                "supplier": "Ninja-Vegetables",
+                "imgUrl" : "./images/carrot.png"
+            },
+            {
+                
+                "name" : "Chou",
+                "categorie": "legumes",
+                "price" : 400,
+                "supplier": "Ninja-Vegetables",
+                "imgUrl" : "./images/cabbage.png"
+            },
+            {
+                
+                "name" : "Oignon",
+                "categorie": "legumes",
+                "price" : 500,
+                "supplier": "Ninja-Vegetables",
+                "imgUrl" : "./images/oignon.png"
+            },
+            {
+                
+                "name" : "Aubergine",
+                "categorie": "legumes",
+                "price" : 250,
+                "supplier": "Ninja-Vegetables",
+                "imgUrl" : "./images/eggplant.png"
+            },
+            {
+                
+                "name" : "Orange",
+                "categorie": "fruits",
+                "price" : 600,
+                "supplier": "Gojo-fruits",
+                "imgUrl" : "./images/orange.png"
+            },
+            {
+                
+                "name" : "Pomme",
+                "categorie": "fruits",
+                "price" : 700,
+                "supplier": "Gojo-fruits",
+                "imgUrl" : "./images/apple.png"
+            },
+            {
+                
+                "name" : "Banane",
+                "categorie": "fruits",
+                "price" : 500,
+                "supplier": "Gojo-fruits",
+                "imgUrl" : "./images/banana.png"
+            },
+            {
+                
+                "name" : "Ananas",
+                "categorie": "fruits",
+                "price" : 900,
+                "supplier": "Gojo-fruits",
+                "imgUrl" : "./images/pineapple.png"
+            }
+        ]
+
+        fruits = products.filter(product => {  
+            if(product.categorie == "fruits") {
+                return product
+            }
+        })
+
+        vegetables = products.filter(product => {  
+            if(product.categorie == "legumes") {
+                return product
+            }
+        })
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const cat = urlParams.get('cat')
+
+        if(cat === 'fruit') {
+            
+            card.forEach((item,i) => {
+                item.querySelector('.product-image').src = fruits[i].imgUrl
+                item.querySelector('.product-name').innerText = fruits[i].name
+                item.querySelector('.int').innerText = fruits[i].price
+                item.querySelector('.product-supplier').innerText = fruits[i].supplier
+                let links = item.querySelectorAll('a')
+                links.forEach(link => {
+                    link.setAttribute("href", `./details.html?item=${fruits[i].name}`);
+                })
+            })
+        }else {
+            card.forEach((item,i) => {
+                item.querySelector('.product-image').src = vegetables[i].imgUrl
+                item.querySelector('.product-name').innerText = vegetables[i].name
+                item.querySelector('.int').innerText = vegetables[i].price
+                item.querySelector('.product-supplier').innerText = vegetables[i].supplier
+                let links = item.querySelectorAll('a')
+                links.forEach(link => {
+                    link.setAttribute("href", `./details.html?item=${vegetables[i].name}`);
+                })
+            })
+        }
+
+    </script>
+</body>
+
+</html>
